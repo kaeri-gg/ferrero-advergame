@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="4_lbq61"]
 [ext_resource type="Script" uid="uid://bsewxssn3vong" path="res://script/start_button.gd" id="5_bqtkl"]
 [ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="6_0p2wx"]
+[ext_resource type="Script" path="res://script/game_menu.gd" id="7_h8j2x"]
 
 [sub_resource type="Theme" id="Theme_qus6b"]
 Label/colors/font_color = Color(0.97105986, 0.9788627, 0.8914898, 1)
@@ -34,6 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
+script = ExtResource("7_h8j2x")
 
 [node name="Background" type="Panel" parent="." unique_id=1181965372]
 layout_mode = 1
