@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="chocolate-game"
+run/main_scene="uid://dxyp34jnklgor"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://b32md70e2l58p"
+
+[autoload]
+
+utils="*uid://cqn1kg6r8fyst"
+BgMusic="*uid://sj5p2yu101hb"
+sound_manager="*uid://boxcywfwrq5rd"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale=2.0
+
+[dotnet]
+
+project/assembly_name="chocolate-game"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

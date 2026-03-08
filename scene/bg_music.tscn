@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://sj5p2yu101hb"]
+
+[ext_resource type="AudioStream" uid="uid://ck58nlfg0ywtt" path="res://assets/sounds/boogie-pecan-pie-main-version-41135-02-14.mp3" id="1_fpj07"]
+
+[node name="BGMusic" type="AudioStreamPlayer2D" unique_id=1096188247]
+stream = ExtResource("1_fpj07")
+autoplay = true
+bus = &"BGM"
+parameters/looping = true

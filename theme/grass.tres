@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://cqumuq5j4ylg"]
+
+[ext_resource type="Texture2D" uid="uid://bxsmacitfa01b" path="res://assets/grass.png" id="1_0ifrx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ek8i"]
+texture = ExtResource("1_0ifrx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mmx7"]
+texture = ExtResource("1_0ifrx")
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_6ek8i")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_6mmx7")

@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://dxyp34jnklgor"]
+
+[ext_resource type="Theme" uid="uid://bm8opoun61hyp" path="res://theme/menu_theme.tres" id="1_m0u0p"]
+[ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="2_iaqab"]
+[ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="3_f1kcw"]
+[ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="4_lbq61"]
+[ext_resource type="Script" uid="uid://bsewxssn3vong" path="res://script/start_button.gd" id="5_bqtkl"]
+[ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="6_0p2wx"]
+
+[sub_resource type="Theme" id="Theme_qus6b"]
+Label/colors/font_color = Color(0.97105986, 0.9788627, 0.8914898, 1)
+Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.23137255)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("3_f1kcw")
+
+[sub_resource type="Theme" id="Theme_wr0q8"]
+Label/colors/font_color = Color(0.96239716, 0.82290924, 0.575198, 1)
+Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.03529412)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("3_f1kcw")
+
+[node name="GameMenu" type="Control" unique_id=1566940627]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=1181965372]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_m0u0p")
+
+[node name="Panel" type="Panel" parent="." unique_id=1145589264]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="MarginContainer" parent="Panel" unique_id=182549606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer" unique_id=744088763]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer/MarginContainer" unique_id=563858842]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=2024091590]
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=253937427]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_iaqab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=1141267907]
+clip_contents = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = SubResource("Theme_qus6b")
+text = "Eyeing for chocolates? Memorize the location before they disappear! Click the exact tiles where they were to get discounts. You only have 60 seconds!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 6
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=1178928285]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="StartButton" type="Button" parent="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=746053087]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_lbq61")
+text = "Play"
+script = ExtResource("5_bqtkl")
+
+[node name="Label2" type="Label" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=741360013]
+clip_contents = true
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+theme = SubResource("Theme_wr0q8")
+text = "For education purpose only. 
+Please don't sue us. :("
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 6
+
+[node name="Background2" type="Panel" parent="." unique_id=1333572373]
+visible = false
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme = ExtResource("6_0p2wx")
+
+[connection signal="pressed" from="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" to="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" method="on_start_button_pressed"]

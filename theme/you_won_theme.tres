@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://bepmowqiws52l"]
+
+[ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="1_augce"]
+
+[resource]
+default_font_size = 50
+Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
+Label/font_sizes/font_size = 33
+Label/fonts/font = ExtResource("1_augce")

@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://dxyp34jnklgor"]
+
+[ext_resource type="Theme" uid="uid://bm8opoun61hyp" path="res://theme/menu_theme.tres" id="1_jowre"]
+[ext_resource type="Texture2D" uid="uid://dq1deavoxyvc1" path="res://assets/Ferrerorocher_brand_logo.png" id="2_rjxss"]
+[ext_resource type="Script" uid="uid://bsewxssn3vong" path="res://script/start_button.gd" id="3_jprcw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjxss"]
+bg_color = Color(0.90588236, 0.5764706, 0, 1)
+corner_detail = 9
+shadow_color = Color(0.14406255, 0.14406255, 0.14406249, 0.6)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jprcw"]
+bg_color = Color(0.90588236, 0.5764706, 0, 1)
+corner_detail = 9
+shadow_color = Color(0.14406255, 0.14406255, 0.14406249, 0.6)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rxej"]
+bg_color = Color(0.96021277, 0.6121756, 7.70092e-07, 1)
+corner_detail = 9
+shadow_color = Color(0.14406255, 0.14406255, 0.14406249, 0.6)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxfb2"]
+bg_color = Color(0.90588236, 0.5764706, 0, 1)
+corner_detail = 9
+shadow_color = Color(0.14406255, 0.14406255, 0.14406249, 0.6)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qus6b"]
+bg_color = Color(0.84416574, 0.5359117, 0, 1)
+corner_detail = 9
+shadow_color = Color(0.14406255, 0.14406255, 0.14406249, 0.6)
+shadow_size = 7
+
+[sub_resource type="Theme" id="Theme_wr0q8"]
+default_font_size = 20
+Button/styles/disabled = SubResource("StyleBoxFlat_rjxss")
+Button/styles/focus = SubResource("StyleBoxFlat_jprcw")
+Button/styles/hover = SubResource("StyleBoxFlat_5rxej")
+Button/styles/normal = SubResource("StyleBoxFlat_xxfb2")
+Button/styles/pressed = SubResource("StyleBoxFlat_qus6b")
+
+[node name="GameMenu" type="Control" unique_id=1566940627]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=1181965372]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jowre")
+
+[node name="Panel" type="Panel" parent="." unique_id=1145589264]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="MarginContainer" parent="Panel" unique_id=182549606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer" unique_id=744088763]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PanelContainer/MarginContainer" unique_id=563858842]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=2024091590]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 70
+
+[node name="TextureRect" type="TextureRect" parent="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=253937427]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_rjxss")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=1141267907]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "This is game description this is game description this is game descriptionthis is game descriptionthis is game description."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 6
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/PanelContainer/MarginContainer/VBoxContainer" unique_id=1178928285]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="StartButton" type="Button" parent="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=746053087]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_wr0q8")
+text = "Start Game"
+script = ExtResource("3_jprcw")
+
+[connection signal="pressed" from="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" to="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" method="on_start_button_pressed"]

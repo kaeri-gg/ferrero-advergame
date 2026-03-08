@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://c4cqm21oxci5n"]
+
+[ext_resource type="Texture2D" uid="uid://ceps31ui542xf" path="res://assets/ferrero-bg-2.png" id="1_7vnb1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2iya3"]
+texture = ExtResource("1_7vnb1")
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_2iya3")

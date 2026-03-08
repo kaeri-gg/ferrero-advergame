@@ -1,0 +1,23 @@
+[gd_resource type="Theme" format=3 uid="uid://btxsjljyfrcu6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2h1d3"]
+bg_color = Color(0.94509804, 0.9607843, 0.7411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el1c5"]
+bg_color = Color(0.94509804, 0.9607843, 0.7411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxknv"]
+bg_color = Color(0.94509804, 0.9607843, 0.7411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgwml"]
+bg_color = Color(0.95220894, 0.78662425, 0.40562, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1ado"]
+bg_color = Color(0.94509804, 0.9607843, 0.7411765, 1)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_2h1d3")
+Button/styles/focus = SubResource("StyleBoxFlat_el1c5")
+Button/styles/hover = SubResource("StyleBoxFlat_gxknv")
+Button/styles/normal = SubResource("StyleBoxFlat_wgwml")
+Button/styles/pressed = SubResource("StyleBoxFlat_x1ado")

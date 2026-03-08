@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://b06fgjpnc0shr"]
+
+[ext_resource type="Script" uid="uid://d1sfkfixttef6" path="res://script/winning_scene.gd" id="1_1op46"]
+[ext_resource type="Theme" uid="uid://ygh08o38q3sj" path="res://theme/game_over_theme.tres" id="1_2ivjl"]
+[ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="2_pym3h"]
+[ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="3_265hk"]
+[ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="3_luy87"]
+[ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="5_mpa62"]
+
+[sub_resource type="Theme" id="Theme_pym3h"]
+Label/colors/font_color = Color(0.9555802, 0.9001118, 0.5622426, 1)
+Label/font_sizes/font_size = 35
+Label/fonts/font = ExtResource("3_265hk")
+
+[sub_resource type="Theme" id="Theme_1op46"]
+default_font_size = 50
+Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
+Label/font_sizes/font_size = 33
+Label/fonts/font = ExtResource("3_265hk")
+
+[sub_resource type="Theme" id="Theme_luy87"]
+default_font_size = 50
+Label/colors/font_color = Color(0.45891654, 0.21165806, 0.08118083, 1)
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("3_265hk")
+
+[node name="WinningScene" type="Panel" unique_id=403532373]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1op46")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=1098889261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2ivjl")
+
+[node name="Grass" type="Panel" parent="." unique_id=2057204245]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme = ExtResource("2_pym3h")
+
+[node name="Text" type="VBoxContainer" parent="." unique_id=487657716]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -152.5
+offset_right = 190.5
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderContainer" type="MarginContainer" parent="Text" unique_id=663575084]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="Text/HeaderContainer" unique_id=2051496376]
+visible = false
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="TimerIsUp" type="Label" parent="Text/HeaderContainer" unique_id=2121345086]
+layout_mode = 2
+theme = SubResource("Theme_pym3h")
+text = "Time's up!"
+horizontal_alignment = 1
+
+[node name="LabelsContainer" type="MarginContainer" parent="Text" unique_id=447708333]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Text/LabelsContainer" unique_id=1754123576]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=785568132]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme = SubResource("Theme_1op46")
+theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
+theme_override_font_sizes/font_size = 50
+text = "You won"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=1017315573]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme = SubResource("Theme_1op46")
+theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
+theme_override_font_sizes/font_size = 50
+text = "20% discount"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=273666367]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme = SubResource("Theme_luy87")
+text = "on your next purchase! "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="MarginContainer" parent="Text" unique_id=87831163]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Text/Button" unique_id=414299130]
+layout_mode = 2
+
+[node name="PlayAgain" type="Button" parent="Text/Button/MarginContainer" unique_id=993945265]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_mpa62")
+text = "Play again"
+
+[node name="LogoContainer" type="MarginContainer" parent="." unique_id=1335808209]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -135.0
+offset_right = 135.0
+offset_bottom = 184.3013
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="Logo" type="TextureRect" parent="LogoContainer" unique_id=971526389]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_luy87")
+expand_mode = 5
+stretch_mode = 4
+
+[connection signal="pressed" from="Text/Button/MarginContainer/PlayAgain" to="Text/Button/MarginContainer/PlayAgain" method="on_start_button_pressed"]
