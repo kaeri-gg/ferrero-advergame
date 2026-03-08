@@ -3,19 +3,11 @@
 [ext_resource type="Theme" uid="uid://bm8opoun61hyp" path="res://theme/menu_theme.tres" id="1_m0u0p"]
 [ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="2_iaqab"]
 [ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="3_f1kcw"]
+[ext_resource type="Theme" uid="uid://t0c22ef7e8oe" path="res://theme/info_theme.tres" id="4_f1kcw"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="4_lbq61"]
 [ext_resource type="Script" uid="uid://bsewxssn3vong" path="res://script/start_button.gd" id="5_bqtkl"]
 [ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="6_0p2wx"]
-[ext_resource type="Script" path="res://script/game_menu.gd" id="7_h8j2x"]
-
-[sub_resource type="Theme" id="Theme_qus6b"]
-Label/colors/font_color = Color(0.97105986, 0.9788627, 0.8914898, 1)
-Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.23137255)
-Label/constants/shadow_offset_x = 2
-Label/constants/shadow_offset_y = 3
-Label/constants/shadow_outline_size = 3
-Label/font_sizes/font_size = 20
-Label/fonts/font = ExtResource("3_f1kcw")
+[ext_resource type="Script" uid="uid://cv2p1rj01mifd" path="res://script/game_menu.gd" id="7_h8j2x"]
 
 [sub_resource type="Theme" id="Theme_wr0q8"]
 Label/colors/font_color = Color(0.96239716, 0.82290924, 0.575198, 1)
@@ -99,7 +91,7 @@ stretch_mode = 4
 clip_contents = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-theme = SubResource("Theme_qus6b")
+theme = ExtResource("4_f1kcw")
 text = "Eyeing for chocolates? Memorize the location before they disappear! Click the exact tiles where they were to get discounts. You only have 60 seconds!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -148,5 +140,66 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 theme = ExtResource("6_0p2wx")
+
+[node name="Settings" type="Panel" parent="." unique_id=809089903]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings" unique_id=749495964]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings/PanelContainer" unique_id=312301045]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="Settings/PanelContainer/MarginContainer" unique_id=1940528596]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="DisplaySettings" type="Label" parent="Settings/PanelContainer/MarginContainer/Grid" unique_id=479460206]
+layout_mode = 2
+text = "Display Settings:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/PanelContainer/MarginContainer/Grid" unique_id=966376353]
+layout_mode = 2
+
+[node name="Resolution" type="Label" parent="Settings/PanelContainer/MarginContainer/Grid/HBoxContainer" unique_id=1440056513]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resolution: "
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="Settings/PanelContainer/MarginContainer/Grid/HBoxContainer" unique_id=332930607]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Settings/PanelContainer/MarginContainer/Grid" unique_id=163356138]
+layout_mode = 2
+
+[node name="UIScale" type="Label" parent="Settings/PanelContainer/MarginContainer/Grid/HBoxContainer2" unique_id=597241081]
+unique_name_in_owner = true
+layout_mode = 2
+text = "UI Scale:"
+
+[node name="UIScaleOptionButton" type="OptionButton" parent="Settings/PanelContainer/MarginContainer/Grid/HBoxContainer2" unique_id=1358091460]
+unique_name_in_owner = true
+layout_mode = 2
 
 [connection signal="pressed" from="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" to="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" method="on_start_button_pressed"]
