@@ -10,3 +10,6 @@ Label/constants/shadow_offset_y = 3
 Label/constants/shadow_outline_size = 3
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("1_k4yyp")
+OptionButton/colors/font_color = Color(0.972549, 0.98039216, 0.8901961, 1)
+OptionButton/font_sizes/font_size = 20
+OptionButton/fonts/font = ExtResource("1_k4yyp")

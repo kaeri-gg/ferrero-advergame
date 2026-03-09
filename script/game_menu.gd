@@ -1,5 +1,8 @@
 extends Control
 
+@onready var settings_panel: Panel = %SettingsModal
+@onready var open_settings_button: TextureButton = %OpenSettings
+@onready var close_settings_button: TextureButton = %CloseSettings
 @onready var resolution_label: Label = %Resolution
 @onready var resolution_option_button: OptionButton = %ResolutionOptionButton
 
@@ -7,8 +10,27 @@ extends Control
 @onready var ui_scale_option_button: OptionButton = %UIScaleOptionButton
 
 func _ready() -> void:
+	settings_panel.hide()
+	if not open_settings_button.pressed.is_connected(_on_open_settings_pressed):
+		open_settings_button.pressed.connect(_on_open_settings_pressed)
+	if not close_settings_button.pressed.is_connected(_on_close_settings_pressed):
+		close_settings_button.pressed.connect(_on_close_settings_pressed)
 	_setup_resolution_controls()
 	_setup_ui_scale_controls()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("escape"):
+		_toggle_settings_panel()
+		get_viewport().set_input_as_handled()
+
+func _toggle_settings_panel() -> void:
+	settings_panel.visible = not settings_panel.visible
+
+func _on_open_settings_pressed() -> void:
+	settings_panel.show()
+
+func _on_close_settings_pressed() -> void:
+	settings_panel.hide()
 
 func _setup_resolution_controls() -> void:
 	resolution_option_button.clear()
