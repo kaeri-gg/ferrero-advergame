@@ -6,7 +6,6 @@ extends Control
 @onready var player_score_label: Label = %PlayerScoreLabel
 @onready var player_timer_label: Label = %PlayerTimerLabel
 
-
 const WinningScene := preload("res://script/winning_scene.gd")
 
 const feedback_showtime: float = 0.8
@@ -25,19 +24,15 @@ var tiles_icon: Dictionary = {}
 
 
 var icon_textures = [
-	preload("uid://dsrya3h6t1851"),
-	preload("uid://bitutw40j27dk"),
-	preload("uid://dfstr8oeu3itf"),
-	preload("uid://hsyvq1kkt7k1"),
-	preload("uid://b3suuvbc7c5mc"),
-	preload("uid://cttntkbshkb70"),
-	preload("uid://c1ipfvhdo56of")
-]
-
-var dummy_textures = [
-	preload("uid://mbnh0kmcrqxv"),
-	preload("uid://bouyxneg3nkty"),
-	preload("uid://b8r1dfcyugafk")
+	preload("uid://b6qvf7a0mcdus"),
+	preload("uid://60vxsf5p18ch"),
+	preload("uid://cqf8op828e4ec"),
+	preload("uid://cbao1235bvclv"),
+	preload("uid://cy2luwjnwvnp4"),
+	preload("uid://cbhqqs3dnly3j"),
+	preload("uid://evlaxqmmummb"),
+	preload("uid://o2ymlyqoi65p"),
+	preload("uid://b828o58sc06lq")
 ]
 
 func reset_game() -> void:
