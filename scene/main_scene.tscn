@@ -12,6 +12,9 @@
 [ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="8_pi0uh"]
 [ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="10_86xya"]
 [ext_resource type="Texture2D" uid="uid://mpyy6tu83tlb" path="res://assets/feedback-wrong.png" id="10_xavy2"]
+[ext_resource type="Texture2D" uid="uid://fc7gtqqa1doy" path="res://assets/icon/button-icon_close.png" id="13_6e7jr"]
+[ext_resource type="Texture2D" uid="uid://b4i3j1j04sg60" path="res://assets/ferrero-products.jpg" id="13_7l8gs"]
+[ext_resource type="Texture2D" uid="uid://4e4av6ty6p3h" path="res://assets/icon/button-icon_close-hover.png" id="14_6s1rr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi0uh"]
 bg_color = Color(0.38444993, 0.20696884, 0.09263118, 1)
@@ -34,6 +37,18 @@ Label/constants/shadow_offset_y = 10
 Label/constants/shadow_outline_size = 5
 Label/font_sizes/font_size = 280
 Label/fonts/font = ExtResource("6_hrphr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e7jr"]
+texture = ExtResource("13_7l8gs")
+
+[sub_resource type="Theme" id="Theme_6s1rr"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_6e7jr")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p2wx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_4cqoh"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0p2wx")
 
 [node name="MainScene" type="Control" unique_id=456637166]
 layout_mode = 3
@@ -381,3 +396,100 @@ size_flags_vertical = 0
 texture = ExtResource("10_86xya")
 expand_mode = 5
 stretch_mode = 4
+
+[node name="ProductSelection" type="Panel" parent="." unique_id=1817772342]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundContainer" type="MarginContainer" parent="ProductSelection" unique_id=731140768]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ProductSelection/BackgroundContainer" unique_id=87646015]
+layout_mode = 2
+theme = SubResource("Theme_6s1rr")
+
+[node name="MarginContainer" type="MarginContainer" parent="ProductSelection" unique_id=2055874986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -102.0
+offset_right = 149.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="GridContainer" parent="ProductSelection/MarginContainer" unique_id=15946075]
+layout_mode = 2
+theme = SubResource("Theme_4cqoh")
+columns = 3
+
+[node name="Product1" type="TextureButton" parent="ProductSelection/MarginContainer/PanelContainer" unique_id=1513777446]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("13_6e7jr")
+texture_pressed = ExtResource("14_6s1rr")
+texture_hover = ExtResource("14_6s1rr")
+texture_focused = ExtResource("14_6s1rr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Product2" type="TextureButton" parent="ProductSelection/MarginContainer/PanelContainer" unique_id=1385707147]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("13_6e7jr")
+texture_pressed = ExtResource("14_6s1rr")
+texture_hover = ExtResource("14_6s1rr")
+texture_focused = ExtResource("14_6s1rr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Product3" type="TextureButton" parent="ProductSelection/MarginContainer/PanelContainer" unique_id=1446556570]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("13_6e7jr")
+texture_pressed = ExtResource("14_6s1rr")
+texture_hover = ExtResource("14_6s1rr")
+texture_focused = ExtResource("14_6s1rr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Product4" type="TextureButton" parent="ProductSelection/MarginContainer/PanelContainer" unique_id=1510810702]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("13_6e7jr")
+texture_pressed = ExtResource("14_6s1rr")
+texture_hover = ExtResource("14_6s1rr")
+texture_focused = ExtResource("14_6s1rr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Product5" type="TextureButton" parent="ProductSelection/MarginContainer/PanelContainer" unique_id=1667176183]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("13_6e7jr")
+texture_pressed = ExtResource("14_6s1rr")
+texture_hover = ExtResource("14_6s1rr")
+texture_focused = ExtResource("14_6s1rr")
+ignore_texture_size = true
+stretch_mode = 0
