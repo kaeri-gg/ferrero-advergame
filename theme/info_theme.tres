@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://t0c22ef7e8oe"]
+
+[ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="1_k4yyp"]
+
+[resource]
+Label/colors/font_color = Color(0.97105986, 0.9788627, 0.8914898, 1)
+Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.23137255)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_k4yyp")
+OptionButton/colors/font_color = Color(0.972549, 0.98039216, 0.8901961, 1)
+OptionButton/font_sizes/font_size = 20
+OptionButton/fonts/font = ExtResource("1_k4yyp")

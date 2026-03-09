@@ -3,18 +3,16 @@
 [ext_resource type="Theme" uid="uid://bm8opoun61hyp" path="res://theme/menu_theme.tres" id="1_m0u0p"]
 [ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="2_iaqab"]
 [ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="3_f1kcw"]
+[ext_resource type="Theme" uid="uid://t0c22ef7e8oe" path="res://theme/info_theme.tres" id="4_f1kcw"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="4_lbq61"]
 [ext_resource type="Script" uid="uid://bsewxssn3vong" path="res://script/start_button.gd" id="5_bqtkl"]
 [ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="6_0p2wx"]
-
-[sub_resource type="Theme" id="Theme_qus6b"]
-Label/colors/font_color = Color(0.97105986, 0.9788627, 0.8914898, 1)
-Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.23137255)
-Label/constants/shadow_offset_x = 2
-Label/constants/shadow_offset_y = 3
-Label/constants/shadow_outline_size = 3
-Label/font_sizes/font_size = 20
-Label/fonts/font = ExtResource("3_f1kcw")
+[ext_resource type="Script" uid="uid://cv2p1rj01mifd" path="res://script/game_menu.gd" id="7_h8j2x"]
+[ext_resource type="Texture2D" uid="uid://dc61iwv5j38p6" path="res://assets/icon/button-icon_settings.png" id="9_bqtkl"]
+[ext_resource type="Theme" uid="uid://oaup8jlrnyqy" path="res://theme/modal_theme.tres" id="9_lbq61"]
+[ext_resource type="Texture2D" uid="uid://bjluj36vx3i5w" path="res://assets/icon/button-icon_settings-hover.png" id="10_0p2wx"]
+[ext_resource type="Texture2D" uid="uid://fc7gtqqa1doy" path="res://assets/icon/button-icon_close.png" id="12_tyk5i"]
+[ext_resource type="Texture2D" uid="uid://4e4av6ty6p3h" path="res://assets/icon/button-icon_close-hover.png" id="13_8neqs"]
 
 [sub_resource type="Theme" id="Theme_wr0q8"]
 Label/colors/font_color = Color(0.96239716, 0.82290924, 0.575198, 1)
@@ -25,6 +23,18 @@ Label/constants/shadow_outline_size = 3
 Label/font_sizes/font_size = 14
 Label/fonts/font = ExtResource("3_f1kcw")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqtkl"]
+bg_color = Color(0.31764707, 0.7058824, 0, 0)
+
+[sub_resource type="Theme" id="Theme_0p2wx"]
+Panel/styles/panel = SubResource("StyleBoxFlat_bqtkl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p2wx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_bqtkl"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0p2wx")
+
 [node name="GameMenu" type="Control" unique_id=1566940627]
 layout_mode = 3
 anchors_preset = 15
@@ -34,6 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
+script = ExtResource("7_h8j2x")
 
 [node name="Background" type="Panel" parent="." unique_id=1181965372]
 layout_mode = 1
@@ -97,7 +108,7 @@ stretch_mode = 4
 clip_contents = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-theme = SubResource("Theme_qus6b")
+theme = ExtResource("4_f1kcw")
 text = "Eyeing for chocolates? Memorize the location before they disappear! Click the exact tiles where they were to get discounts. You only have 60 seconds!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -146,5 +157,134 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 theme = ExtResource("6_0p2wx")
+
+[node name="SettingsButton" type="Panel" parent="." unique_id=1215172887]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+theme = SubResource("Theme_0p2wx")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsButton" unique_id=1362106942]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsButton/MarginContainer" unique_id=974526696]
+layout_mode = 2
+theme = SubResource("Theme_bqtkl")
+
+[node name="OpenSettings" type="TextureButton" parent="SettingsButton/MarginContainer/PanelContainer" unique_id=463279249]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("9_bqtkl")
+texture_pressed = ExtResource("10_0p2wx")
+texture_hover = ExtResource("10_0p2wx")
+texture_focused = ExtResource("10_0p2wx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SettingsModal" type="Panel" parent="." unique_id=809089903]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_lbq61")
+
+[node name="ModalContainer" type="MarginContainer" parent="SettingsModal" unique_id=312301045]
+layout_mode = 0
+offset_right = 750.0
+offset_bottom = 500.0
+
+[node name="Grid" type="GridContainer" parent="SettingsModal/ModalContainer" unique_id=1940528596]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_f1kcw")
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsModal/ModalContainer/Grid" unique_id=1753215290]
+layout_mode = 2
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsModal/ModalContainer/Grid/MarginContainer" unique_id=1936978355]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DisplaySettings" type="Label" parent="SettingsModal/ModalContainer/Grid/MarginContainer/VBoxContainer" unique_id=479460206]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.97870916, 0.77917635, 0.2883741, 1)
+text = "Display Settings:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsModal/ModalContainer/Grid" unique_id=966376353]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="Resolution" type="Label" parent="SettingsModal/ModalContainer/Grid/HBoxContainer" unique_id=1440056513]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resolution: "
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="SettingsModal/ModalContainer/Grid/HBoxContainer" unique_id=332930607]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsModal/ModalContainer/Grid" unique_id=163356138]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 60
+
+[node name="UIScale" type="Label" parent="SettingsModal/ModalContainer/Grid/HBoxContainer2" unique_id=597241081]
+unique_name_in_owner = true
+layout_mode = 2
+text = "UI Scale:"
+
+[node name="UIScaleOptionButton" type="OptionButton" parent="SettingsModal/ModalContainer/Grid/HBoxContainer2" unique_id=1358091460]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ButtonContainer" type="MarginContainer" parent="SettingsModal" unique_id=946126366]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_bottom = 95.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsModal/ButtonContainer" unique_id=1229962583]
+layout_mode = 2
+theme = SubResource("Theme_bqtkl")
+
+[node name="CloseSettings" type="TextureButton" parent="SettingsModal/ButtonContainer/PanelContainer" unique_id=483117365]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("12_tyk5i")
+texture_pressed = ExtResource("13_8neqs")
+texture_hover = ExtResource("13_8neqs")
+texture_focused = ExtResource("13_8neqs")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" to="Panel/PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/StartButton" method="on_start_button_pressed"]
