@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cy2luwjnwvnp4" path="res://assets/stickers/ferrero-products_0004_050069.jpg.png" id="18_l506t"]
 [ext_resource type="Texture2D" uid="uid://cbhqqs3dnly3j" path="res://assets/stickers/ferrero-products_0005_100014674_ca87.png" id="19_nw6ib"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="20_f8mcn"]
+[ext_resource type="Theme" uid="uid://t0c22ef7e8oe" path="res://theme/info_theme.tres" id="20_rvira"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi0uh"]
 bg_color = Color(0.38444993, 0.20696884, 0.09263118, 1)
@@ -576,5 +577,19 @@ size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 theme = ExtResource("20_f8mcn")
 text = "Start game"
+
+[node name="NotificationContainer" type="MarginContainer" parent="ProductSelection/GridContainer" unique_id=1191796204]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ProductSelection/GridContainer/NotificationContainer" unique_id=2137788438]
+layout_mode = 2
+
+[node name="NotificationLabel" type="Label" parent="ProductSelection/GridContainer/NotificationContainer/VBoxContainer" unique_id=468548745]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("20_rvira")
+text = "Notification"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="ProductSelection/GridContainer/ButtonContainer/StartGame" to="ProductSelection/GridContainer/ButtonContainer/StartGame" method="on_start_button_pressed"]
