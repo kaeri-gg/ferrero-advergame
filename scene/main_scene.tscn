@@ -478,8 +478,8 @@ layout_mode = 2
 [node name="Instruction" type="Label" parent="ProductSelection/GridContainer/LabelContainer" unique_id=184787878]
 layout_mode = 2
 theme = ExtResource("5_cj0ow")
-text = "Select products up to 3 
-you want for a discount:"
+text = "Select products up to 3 you 
+want for a discount:"
 horizontal_alignment = 1
 
 [node name="ProductsContainer" type="MarginContainer" parent="ProductSelection/GridContainer" unique_id=2055874986]
