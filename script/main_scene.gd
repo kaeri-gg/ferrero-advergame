@@ -1,7 +1,9 @@
 class_name MainScene
 extends Control
 
-@onready var grid_container: GridContainer = %GridContainer
+@onready var product_selection: ProductSelection = %ProductSelection
+
+@onready var chocolate_container: GridContainer = %GridContainer
 @onready var feedback: Feedback = %Feedback
 @onready var player_score_label: Label = %PlayerScoreLabel
 @onready var player_timer_label: Label = %PlayerTimerLabel
@@ -24,15 +26,15 @@ var tiles_icon: Dictionary = {}
 
 
 var icon_textures = [
-	preload("uid://b6qvf7a0mcdus"),
-	preload("uid://60vxsf5p18ch"),
-	preload("uid://cqf8op828e4ec"),
-	preload("uid://cbao1235bvclv"),
-	preload("uid://cy2luwjnwvnp4"),
-	preload("uid://cbhqqs3dnly3j"),
-	preload("uid://evlaxqmmummb"),
-	preload("uid://o2ymlyqoi65p"),
-	preload("uid://b828o58sc06lq")
+	#preload("uid://b6qvf7a0mcdus"),
+	#preload("uid://60vxsf5p18ch"),
+	#preload("uid://cqf8op828e4ec"),
+	#preload("uid://cbao1235bvclv"),
+	#preload("uid://cy2luwjnwvnp4"),
+	#preload("uid://cbhqqs3dnly3j"),
+	#preload("uid://evlaxqmmummb"),
+	#preload("uid://o2ymlyqoi65p"),
+	#preload("uid://b828o58sc06lq")
 ]
 
 func reset_game() -> void:
@@ -58,16 +60,22 @@ func reset_grid() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for child in grid_container.get_children():
+	for child in chocolate_container.get_children():
 		if child is Button:
 			buttons.append(child)
 		
 	for i in buttons.size():
 		buttons[i].button_down.connect(on_button_pressed.bind(i))
 	
-			
+	product_selection.show()
+	product_selection.selection_confirmed.connect(start_game)
+
+func start_game(selected: Array[TextureButton]) -> void:
+	for item in selected:
+		icon_textures.append(item)
+		
 	reset_game()
-	grid_container.hide()
+	chocolate_container.hide()
 	start_countdown()
 
 func get_icon_indexes() -> Dictionary[int, bool]:
@@ -138,7 +146,7 @@ func on_button_pressed(index: int) -> void:
 			
 		
 func get_random_icon():
-	return icon_textures[randi() % icon_textures.size()]
+	return icon_textures[randi() % icon_textures.size()].texture_normal
 	
 func fade_in(index: int, icon: Variant):
 	buttons[index].icon = icon
@@ -194,7 +202,7 @@ func start_countdown() -> void:
 	sound_manager.play("Tick")
 	
 	if countdown == 0:
-		grid_container.show()
+		chocolate_container.show()
 		sound_manager.stop("Tick")
 		
 		player_score_label.text = "0"
