@@ -6,6 +6,7 @@ signal selection_confirmed(selected: Array[TextureButton])
 @onready var product_selection: ProductSelection = %ProductSelection
 @onready var product_container: GridContainer = %ProductContainer
 @onready var selected_item_count: Label = %SelectedItemCount
+@onready var notification_label: Label = %NotificationLabel
 @onready var start_game_button: Button = %StartGame
 
 @onready var rocher: TextureButton = %Rocher
@@ -24,9 +25,11 @@ func reset_selection() -> void:
 	selected_chocolates = []
 	max_chocolate_count = 3
 	current_chocolate_count = 0
+	notification_label.text = ""
 
 func _ready() -> void:
 	reset_selection()
+	notification_label.hide()
 	
 	for child in product_container.get_children():
 		if child is TextureButton:
@@ -70,7 +73,8 @@ func on_start_button_pressed() -> void:
 		product_selection.hide()
 		
 	else:
-		print("Please select at least 1 product")
+		notification_label.show()
+		notification_label.text = "Please select at least 1 product."
 
 func highlight(button: TextureButton) -> void:
 	button.modulate = Color(0.715, 0.746, 0.958, 1.0)
