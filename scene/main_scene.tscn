@@ -9,18 +9,18 @@
 [ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="6_hrphr"]
 [ext_resource type="Script" uid="uid://cprinh7cp8qor" path="res://script/feedback.gd" id="6_qvu5t"]
 [ext_resource type="Theme" uid="uid://d32y3tsp1g0hg" path="res://theme/score.tres" id="6_xavy2"]
-[ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="8_pi0uh"]
-[ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="10_86xya"]
 [ext_resource type="Texture2D" uid="uid://mpyy6tu83tlb" path="res://assets/feedback-wrong.png" id="10_xavy2"]
+[ext_resource type="Texture2D" uid="uid://cvqrp1cljdp" path="res://assets/logo/logo-01.png" id="12_f8mcn"]
 [ext_resource type="Script" uid="uid://cvcyf8ypmretc" path="res://script/product_selection.gd" id="13_l506t"]
 [ext_resource type="Texture2D" uid="uid://o2ymlyqoi65p" path="res://assets/stickers/ferrero-products_0007_Layer-0.png" id="14_l506t"]
+[ext_resource type="Texture2D" uid="uid://1k01726dyrvr" path="res://assets/background-3.png" id="14_rvira"]
 [ext_resource type="Texture2D" uid="uid://evlaxqmmummb" path="res://assets/stickers/ferrero-products_0006_Rondnoir2.png" id="15_nw6ib"]
 [ext_resource type="Texture2D" uid="uid://b828o58sc06lq" path="res://assets/stickers/ferrero-products_0008_ferrero-raffaello-2.png" id="16_rvira"]
 [ext_resource type="Texture2D" uid="uid://cbao1235bvclv" path="res://assets/stickers/ferrero-products_0003_20155-600x600.png" id="17_l506t"]
 [ext_resource type="Texture2D" uid="uid://cy2luwjnwvnp4" path="res://assets/stickers/ferrero-products_0004_050069.jpg.png" id="18_l506t"]
 [ext_resource type="Texture2D" uid="uid://cbhqqs3dnly3j" path="res://assets/stickers/ferrero-products_0005_100014674_ca87.png" id="19_nw6ib"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="20_f8mcn"]
-[ext_resource type="Theme" uid="uid://t0c22ef7e8oe" path="res://theme/info_theme.tres" id="20_rvira"]
+[ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="21_l4hwf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi0uh"]
 bg_color = Color(0.38444993, 0.20696884, 0.09263118, 1)
@@ -36,7 +36,7 @@ shadow_size = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_pi0uh")
 
 [sub_resource type="Theme" id="Theme_86xya"]
-Label/colors/font_color = Color(0.9441469, 0.9600974, 0.74313676, 1)
+Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
 Label/colors/font_shadow_color = Color(0.823851, 0.60757995, 0.42139316, 0.39215687)
 Label/constants/shadow_offset_x = 10
 Label/constants/shadow_offset_y = 10
@@ -44,17 +44,47 @@ Label/constants/shadow_outline_size = 5
 Label/font_sizes/font_size = 280
 Label/fonts/font = ExtResource("6_hrphr")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcrpu"]
-bg_color = Color(0.58758485, 0.32639882, 0.18318042, 0.60784316)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4hwf"]
+texture = ExtResource("14_rvira")
 
 [sub_resource type="Theme" id="Theme_6s1rr"]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_dcrpu")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_l4hwf")
+
+[sub_resource type="Theme" id="Theme_l4hwf"]
+default_font_size = 60
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.39215687)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 5
+Label/font_sizes/font_size = 60
+Label/fonts/font = ExtResource("21_l4hwf")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p2wx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Theme" id="Theme_4cqoh"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_0p2wx")
+
+[sub_resource type="Theme" id="Theme_rvira"]
+default_font_size = 60
+Label/colors/font_color = Color(0.44692826, 0.1237965, 0.21069539, 1)
+Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.39215687)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 5
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("21_l4hwf")
+
+[sub_resource type="Theme" id="Theme_dcrpu"]
+default_font_size = 60
+Label/colors/font_color = Color(0.44692826, 0.1237965, 0.21069539, 1)
+Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.39215687)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 5
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("21_l4hwf")
 
 [node name="MainScene" type="Control" unique_id=456637166]
 layout_mode = 3
@@ -407,32 +437,21 @@ unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("10_xavy2")
 
-[node name="Grass" type="Panel" parent="." unique_id=1558040279]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-theme = ExtResource("8_pi0uh")
-
 [node name="LogoContainer" type="MarginContainer" parent="." unique_id=1926646650]
 layout_mode = 1
 offset_right = 170.0
 offset_bottom = 118.58078
 size_flags_horizontal = 4
 mouse_filter = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
 
 [node name="Logo" type="TextureRect" parent="LogoContainer" unique_id=1671018212]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource("10_86xya")
+texture = ExtResource("12_f8mcn")
 expand_mode = 5
 stretch_mode = 4
 
@@ -475,20 +494,21 @@ grow_vertical = 2
 
 [node name="LabelContainer" type="MarginContainer" parent="ProductSelection/GridContainer" unique_id=733361666]
 layout_mode = 2
+theme_override_constants/margin_bottom = 40
 
 [node name="Instruction" type="Label" parent="ProductSelection/GridContainer/LabelContainer" unique_id=184787878]
 layout_mode = 2
-theme = ExtResource("5_cj0ow")
+theme = SubResource("Theme_l4hwf")
 text = "Select products up to 3 you 
 want for a discount:"
 horizontal_alignment = 1
 
 [node name="ProductsContainer" type="MarginContainer" parent="ProductSelection/GridContainer" unique_id=2055874986]
 layout_mode = 2
+theme_override_constants/margin_bottom = 30
 
 [node name="ProductContainer" type="GridContainer" parent="ProductSelection/GridContainer/ProductsContainer" unique_id=15946075]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(800, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -497,7 +517,7 @@ columns = 3
 
 [node name="Rocher" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=1513777446]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("14_l506t")
 ignore_texture_size = true
@@ -505,7 +525,7 @@ stretch_mode = 3
 
 [node name="Rondnoir" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=1385707147]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("15_nw6ib")
 ignore_texture_size = true
@@ -513,7 +533,7 @@ stretch_mode = 3
 
 [node name="Raffaelo" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=1446556570]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("16_rvira")
 ignore_texture_size = true
@@ -521,7 +541,7 @@ stretch_mode = 3
 
 [node name="Kinderini" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=1510810702]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("17_l506t")
 ignore_texture_size = true
@@ -529,7 +549,7 @@ stretch_mode = 3
 
 [node name="Delice" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=1667176183]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("18_l506t")
 ignore_texture_size = true
@@ -537,7 +557,7 @@ stretch_mode = 3
 
 [node name="Bueno" type="TextureButton" parent="ProductSelection/GridContainer/ProductsContainer/ProductContainer" unique_id=992603108]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 300)
+custom_minimum_size = Vector2(380, 220)
 layout_mode = 2
 texture_normal = ExtResource("19_nw6ib")
 ignore_texture_size = true
@@ -552,14 +572,14 @@ layout_mode = 2
 
 [node name="Instruction" type="Label" parent="ProductSelection/GridContainer/SelectedChocoCount/VBoxContainer" unique_id=1401998090]
 layout_mode = 2
-theme = ExtResource("5_cj0ow")
+theme = SubResource("Theme_rvira")
 text = "Selected: "
 horizontal_alignment = 1
 
 [node name="SelectedItemCount" type="Label" parent="ProductSelection/GridContainer/SelectedChocoCount/VBoxContainer" unique_id=1969683816]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("6_xavy2")
+theme = SubResource("Theme_rvira")
 text = "0/3"
 horizontal_alignment = 1
 
@@ -570,7 +590,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="StartGame" type="Button" parent="ProductSelection/GridContainer/ButtonContainer" unique_id=1812791779]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(250, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -588,7 +608,7 @@ layout_mode = 2
 [node name="NotificationLabel" type="Label" parent="ProductSelection/GridContainer/NotificationContainer/VBoxContainer" unique_id=468548745]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("20_rvira")
+theme = SubResource("Theme_dcrpu")
 text = "Notification"
 horizontal_alignment = 1
 

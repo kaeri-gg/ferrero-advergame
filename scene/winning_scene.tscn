@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d1sfkfixttef6" path="res://script/winning_scene.gd" id="1_1op46"]
 [ext_resource type="Theme" uid="uid://ygh08o38q3sj" path="res://theme/game_over_theme.tres" id="1_2ivjl"]
-[ext_resource type="Theme" uid="uid://cqumuq5j4ylg" path="res://theme/grass.tres" id="2_pym3h"]
 [ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="3_265hk"]
-[ext_resource type="Texture2D" uid="uid://b8k7i34j4el6y" path="res://assets/logo.png" id="3_luy87"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="5_mpa62"]
+[ext_resource type="Texture2D" uid="uid://cvqrp1cljdp" path="res://assets/logo/logo-01.png" id="6_mpa62"]
 
 [sub_resource type="Theme" id="Theme_pym3h"]
-Label/colors/font_color = Color(0.9555802, 0.9001118, 0.5622426, 1)
+Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
 Label/font_sizes/font_size = 35
 Label/fonts/font = ExtResource("3_265hk")
 
@@ -40,18 +39,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_2ivjl")
-
-[node name="Grass" type="Panel" parent="." unique_id=2057204245]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-theme = ExtResource("2_pym3h")
 
 [node name="Text" type="VBoxContainer" parent="." unique_id=487657716]
 custom_minimum_size = Vector2(750, 0)
@@ -149,13 +136,14 @@ layout_mode = 2
 
 [node name="PlayAgain" type="Button" parent="Text/Button/MarginContainer" unique_id=993945265]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 theme = ExtResource("5_mpa62")
 text = "Play again"
+icon_alignment = 1
 
 [node name="LogoContainer" type="MarginContainer" parent="." unique_id=1335808209]
 layout_mode = 1
@@ -171,11 +159,11 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 
 [node name="Logo" type="TextureRect" parent="LogoContainer" unique_id=971526389]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_luy87")
+texture = ExtResource("6_mpa62")
 expand_mode = 5
 stretch_mode = 4
 
