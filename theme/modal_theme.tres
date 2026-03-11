@@ -1,15 +1,15 @@
 [gd_resource type="Theme" format=3 uid="uid://oaup8jlrnyqy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfnis"]
-bg_color = Color(0.7196418, 0.5739269, 0.35210514, 1)
+bg_color = Color(0.9529412, 0.89411765, 0.87058824, 0.95686275)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 corner_detail = 10
-shadow_color = Color(0.021434637, 0.021434635, 0.021434633, 0.6)
-shadow_size = 5
-shadow_offset = Vector2(5, 8)
+shadow_color = Color(0.019607844, 0.019607844, 0.019607844, 0.19215687)
+shadow_size = 12
+shadow_offset = Vector2(0, 7)
 
 [resource]
 Panel/styles/panel = SubResource("StyleBoxFlat_rfnis")
