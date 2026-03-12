@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8k7i34j4el6y"
-path="res://.godot/imported/logo.png-e2220799298e3631eb0e245316e0501a.ctex"
+uid="uid://dl2k3q5h65sbe"
+path="res://.godot/imported/ferrero-products_0001_rondnoir.png-1f6d349ea40b647fc7a87ae193e705ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/logo.png"
-dest_files=["res://.godot/imported/logo.png-e2220799298e3631eb0e245316e0501a.ctex"]
+source_file="res://assets/bonus-icon/ferrero-products_0001_rondnoir.png"
+dest_files=["res://.godot/imported/ferrero-products_0001_rondnoir.png-1f6d349ea40b647fc7a87ae193e705ad.ctex"]
 
 [params]
 

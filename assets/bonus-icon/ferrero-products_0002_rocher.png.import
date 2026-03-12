@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxsmacitfa01b"
-path="res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex"
+uid="uid://f83oeg5a6heo"
+path="res://.godot/imported/ferrero-products_0002_rocher.png-d95eec28cb86ed6af5bded6eea388617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass.png"
-dest_files=["res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex"]
+source_file="res://assets/bonus-icon/ferrero-products_0002_rocher.png"
+dest_files=["res://.godot/imported/ferrero-products_0002_rocher.png-d95eec28cb86ed6af5bded6eea388617.ctex"]
 
 [params]
 

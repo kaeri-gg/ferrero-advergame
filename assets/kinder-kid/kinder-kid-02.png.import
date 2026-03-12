@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq1deavoxyvc1"
-path="res://.godot/imported/Ferrerorocher_brand_logo.png-60379c3afd19123d7578a4c223181ddb.ctex"
+uid="uid://b1fgqjtt2eh6m"
+path="res://.godot/imported/kinder-kid-02.png-20ebee9d0bfd86ed16b3d6a1d24c2c5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ferrerorocher_brand_logo.png"
-dest_files=["res://.godot/imported/Ferrerorocher_brand_logo.png-60379c3afd19123d7578a4c223181ddb.ctex"]
+source_file="res://assets/kinder-kid/kinder-kid-02.png"
+dest_files=["res://.godot/imported/kinder-kid-02.png-20ebee9d0bfd86ed16b3d6a1d24c2c5e.ctex"]
 
 [params]
 

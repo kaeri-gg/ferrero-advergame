@@ -14,11 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://bjluj36vx3i5w" path="res://assets/icon/button-icon_settings-hover.png" id="10_0p2wx"]
 [ext_resource type="Texture2D" uid="uid://dsgr33drt25we" path="res://assets/logo/logo-02.png" id="10_l7gqb"]
 [ext_resource type="Texture2D" uid="uid://bdfw5unqmqk2u" path="res://assets/logo/logo-04.png" id="11_ua3xb"]
+[ext_resource type="Theme" uid="uid://dicvppjp5wxy6" path="res://theme/notification.tres" id="12_nmy3l"]
 [ext_resource type="Texture2D" uid="uid://fc7gtqqa1doy" path="res://assets/icon/button-icon_close.png" id="12_tyk5i"]
 [ext_resource type="Texture2D" uid="uid://4e4av6ty6p3h" path="res://assets/icon/button-icon_close-hover.png" id="13_8neqs"]
 
 [sub_resource type="Theme" id="Theme_nmy3l"]
-Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
+Label/colors/font_color = Color(0.7490196, 0.11764706, 0.18039216, 1)
 Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.078431375)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 3
@@ -32,26 +33,17 @@ OptionButton/fonts/font = ExtResource("3_f1kcw")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmy3l"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="Theme" id="Theme_wr0q8"]
-Label/colors/font_color = Color(0.9828525, 0.6613805, 0.64049035, 1)
-Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.019607844)
-Label/constants/shadow_offset_x = 2
-Label/constants/shadow_offset_y = 3
-Label/constants/shadow_outline_size = 3
-Label/font_sizes/font_size = 20
-Label/fonts/font = ExtResource("3_f1kcw")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqtkl"]
 bg_color = Color(0.31764707, 0.7058824, 0, 0)
 
 [sub_resource type="Theme" id="Theme_0p2wx"]
 Panel/styles/panel = SubResource("StyleBoxFlat_bqtkl")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p2wx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0521m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Theme" id="Theme_bqtkl"]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_0p2wx")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0521m")
 
 [sub_resource type="Theme" id="Theme_buqbj"]
 
@@ -167,6 +159,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_lbq61")
+theme_override_font_sizes/font_size = 30
 text = "Play"
 script = ExtResource("5_bqtkl")
 
@@ -235,7 +228,7 @@ stretch_mode = 5
 clip_contents = true
 custom_minimum_size = Vector2(60, 70)
 layout_mode = 2
-theme = SubResource("Theme_wr0q8")
+theme = ExtResource("12_nmy3l")
 text = "For education purpose only. Please don't sue us. :("
 horizontal_alignment = 1
 vertical_alignment = 1
