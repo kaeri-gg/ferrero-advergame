@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="chocolate-game"
+config/name="ferrero-advergame"
 run/main_scene="uid://dxyp34jnklgor"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -35,7 +35,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="chocolate-game"
+project/assembly_name="ferrero-advergame"
 
 [input]
 

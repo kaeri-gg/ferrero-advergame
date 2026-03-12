@@ -96,6 +96,7 @@ grow_vertical = 2
 theme = ExtResource("2_x5n27")
 
 [node name="Grid" type="Panel" parent="." unique_id=1245429442]
+visible = false
 custom_minimum_size = Vector2(550, 550)
 layout_mode = 1
 anchors_preset = 8
@@ -449,7 +450,6 @@ stretch_mode = 4
 
 [node name="ProductSelection" type="Panel" parent="." unique_id=1817772342]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -5,7 +5,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 - Assets by Alicja and Pariya.
 - Inspired by: Brain Buddies
 
-## [Play Here](https://kaeri-gg.github.io/chocolate-game/release/)
+## [Play Here](https://kaeri-gg.github.io/ferrero-advergame/release/)
 > *For educational purposes only.*
 
 ![img.png](assets/img.png)
@@ -36,7 +36,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 ## Project Structure
 
 ```
-chocolate-game/
+ferrero-advergame/
 |-- assets/             # Images, fonts, and sound effects
 |   |-- font/           # LuckiestGuy, PoetsenOne
 |   |-- sounds/         # BGM, click, correct/wrong, countdown, winning
@@ -80,7 +80,7 @@ chocolate-game/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/chocolate-game.git
+   git clone https://github.com/<your-username>/ferrero-advergame.git
    ```
 2. Open `project.godot` in Godot 4.6.
 3. Press **F5** (or *Play*) to run.
@@ -93,7 +93,7 @@ The project includes a Web export preset ("Ferrero Hunt"):
 2. Select the **Ferrero Hunt** preset.
 3. Click **Export Project** — output goes to `release/index.html`.
 
-> The HTML shell injects `<base href="/chocolate-game/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
+> The HTML shell injects `<base href="/ferrero-advergame/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
 
 ---
 

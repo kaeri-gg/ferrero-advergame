@@ -44,7 +44,8 @@ func _setup_resolution_controls() -> void:
 	
 	if OS.has_feature("web"):
 		resolution_option_button.disabled = true
-		resolution_label.text = "Resolution (desktop only):"
+		resolution_label.hide()
+		resolution_option_button.hide()
 	else:
 		resolution_option_button.disabled = false
 		resolution_label.text = "Resolution:"
