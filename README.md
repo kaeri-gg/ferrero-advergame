@@ -1,9 +1,9 @@
 # Ferrero Hunt
 
 A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memorize where the chocolates appear on a 4x4 grid, then click the correct tiles before time runs out to earn discounts!
-- Developed by Kathleen Povadora.
-- Assets by Alicja and Pariya.
-- Inspired by: Brain Buddies
+- Designed & developed by Kathleen Povadora.
+- Kinder kid asset by Pariya.
+- Inspired by: Brain Buddies.
 
 ## [Play Here](https://kaeri-gg.github.io/chocolate-game/release/)
 > *For educational purposes only.*
