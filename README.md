@@ -5,7 +5,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 - Kinder kid asset by Pariya.
 - Inspired by: Brain Buddies.
 
-## [Play Here](https://kaeri-gg.github.io/chocolate-game/release/](https://kaeri-gg.github.io/ferrero-advergame/release))
+## [Play Here](https://kaeri-gg.github.io/ferrero-advergame/release)
 > *For educational purposes only.*
 
 <img width="1918" height="1072" alt="image" src="https://github.com/user-attachments/assets/471e52e8-6668-4a3e-b00d-4be8134434f2" />
@@ -37,7 +37,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 ## Project Structure
 
 ```
-chocolate-game/
+ferrero-advergame/
 |-- assets/             # Images, fonts, and sound effects
 |   |-- font/           # LuckiestGuy, PoetsenOne
 |   |-- sounds/         # BGM, click, correct/wrong, countdown, winning
@@ -81,7 +81,7 @@ chocolate-game/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/chocolate-game.git
+   git clone https://github.com/<your-username>/ferrero-advergame.git
    ```
 2. Open `project.godot` in Godot 4.6.
 3. Press **F5** (or *Play*) to run.
