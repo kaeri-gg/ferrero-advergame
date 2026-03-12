@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://d1sfkfixttef6" path="res://script/winning_scene.gd" id="1_1op46"]
 [ext_resource type="Theme" uid="uid://ygh08o38q3sj" path="res://theme/game_over_theme.tres" id="1_2ivjl"]
 [ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="3_265hk"]
+[ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="4_mpa62"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="5_mpa62"]
 [ext_resource type="Texture2D" uid="uid://cvqrp1cljdp" path="res://assets/logo/logo-01.png" id="6_mpa62"]
+[ext_resource type="Theme" uid="uid://oaup8jlrnyqy" path="res://theme/modal_theme.tres" id="7_66ppb"]
+[ext_resource type="Texture2D" uid="uid://b1fgqjtt2eh6m" path="res://assets/kinder-kid/kinder-kid-02.png" id="8_66ppb"]
+[ext_resource type="Texture2D" uid="uid://djtygfqkehdqm" path="res://assets/bonus-icon/ferrero-products_0000_raffaellooo.png" id="9_ppv2p"]
 
 [sub_resource type="Theme" id="Theme_pym3h"]
 Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
@@ -17,11 +21,88 @@ Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
 Label/font_sizes/font_size = 33
 Label/fonts/font = ExtResource("3_265hk")
 
+[sub_resource type="Theme" id="Theme_ppv2p"]
+default_font_size = 50
+Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
+Label/font_sizes/font_size = 33
+Label/fonts/font = ExtResource("3_265hk")
+
 [sub_resource type="Theme" id="Theme_luy87"]
 default_font_size = 50
 Label/colors/font_color = Color(0.45891654, 0.21165806, 0.08118083, 1)
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("3_265hk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_485dk"]
+bg_color = Color(0.8591287, 0.14282507, 0.19365862, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 9
+shadow_color = Color(0.21176471, 0.05882353, 0.011764706, 1)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ppb"]
+bg_color = Color(0.8591287, 0.14282507, 0.19365862, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 9
+shadow_color = Color(0.21176471, 0.05882353, 0.011764706, 1)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppv2p"]
+bg_color = Color(0.7361259, 0.10440155, 0.1547307, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 9
+shadow_color = Color(0.21176471, 0.05882353, 0.011764706, 1)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4no08"]
+bg_color = Color(0.9532468, 0.53193724, 1.540184e-06, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 9
+shadow_color = Color(0.21176471, 0.05882353, 0.011764706, 1)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyfbx"]
+bg_color = Color(0.8591287, 0.14282507, 0.19365862, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 9
+shadow_color = Color(0.21176471, 0.05882353, 0.011764706, 1)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="Theme" id="Theme_ko56s"]
+default_font_size = 20
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("4_mpa62")
+Button/styles/disabled = SubResource("StyleBoxFlat_485dk")
+Button/styles/focus = SubResource("StyleBoxFlat_66ppb")
+Button/styles/hover = SubResource("StyleBoxFlat_ppv2p")
+Button/styles/normal = SubResource("StyleBoxFlat_4no08")
+Button/styles/pressed = SubResource("StyleBoxFlat_vyfbx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ko56s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_6fhhm"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ko56s")
 
 [node name="WinningScene" type="Panel" unique_id=403532373]
 anchors_preset = 15
@@ -40,7 +121,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_2ivjl")
 
-[node name="Text" type="VBoxContainer" parent="." unique_id=487657716]
+[node name="Details" type="VBoxContainer" parent="." unique_id=487657716]
 custom_minimum_size = Vector2(750, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -55,33 +136,33 @@ offset_bottom = 152.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HeaderContainer" type="MarginContainer" parent="Text" unique_id=663575084]
+[node name="HeaderContainer" type="MarginContainer" parent="Details" unique_id=663575084]
 layout_mode = 2
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_bottom = 20
 
-[node name="Panel" type="Panel" parent="Text/HeaderContainer" unique_id=2051496376]
+[node name="Panel" type="Panel" parent="Details/HeaderContainer" unique_id=2051496376]
 visible = false
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 
-[node name="TimerIsUp" type="Label" parent="Text/HeaderContainer" unique_id=2121345086]
+[node name="TimerIsUp" type="Label" parent="Details/HeaderContainer" unique_id=2121345086]
 layout_mode = 2
 theme = SubResource("Theme_pym3h")
 text = "Time's up!"
 horizontal_alignment = 1
 
-[node name="LabelsContainer" type="MarginContainer" parent="Text" unique_id=447708333]
+[node name="LabelsContainer" type="MarginContainer" parent="Details" unique_id=447708333]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Text/LabelsContainer" unique_id=1754123576]
+[node name="VBoxContainer" type="VBoxContainer" parent="Details/LabelsContainer" unique_id=1754123576]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Text/LabelsContainer/VBoxContainer" unique_id=932332323]
+[node name="MarginContainer" type="MarginContainer" parent="Details/LabelsContainer/VBoxContainer" unique_id=932332323]
 layout_mode = 2
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_bottom = 100
 
-[node name="Message" type="Label" parent="Text/LabelsContainer/VBoxContainer/MarginContainer" unique_id=785568132]
+[node name="Message" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer" unique_id=785568132]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
@@ -93,11 +174,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=2084937731]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 50)
+[node name="MarginContainer2" type="MarginContainer" parent="Details/LabelsContainer/VBoxContainer" unique_id=273120896]
 layout_mode = 2
-theme = SubResource("Theme_1op46")
+
+[node name="GridContainer" type="GridContainer" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2" unique_id=77039098]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreLabel" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=2084937731]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 2
+theme = SubResource("Theme_ppv2p")
 theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
 theme_override_font_sizes/font_size = 50
 text = "Score: 123"
@@ -105,9 +194,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="DiscountLabel" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=1017315573]
+[node name="DiscountLabel" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1017315573]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 60)
+custom_minimum_size = Vector2(700, 60)
 layout_mode = 2
 theme = SubResource("Theme_1op46")
 theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
@@ -117,26 +206,51 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="OnYourNextPurchase" type="Label" parent="Text/LabelsContainer/VBoxContainer" unique_id=273666367]
+[node name="OnYourNextPurchase" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=273666367]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 50)
+custom_minimum_size = Vector2(700, 50)
 layout_mode = 2
 theme = SubResource("Theme_luy87")
 text = "on your next purchase! "
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="MarginContainer" parent="Text" unique_id=87831163]
+[node name="Button" type="MarginContainer" parent="Details" unique_id=87831163]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="MarginContainer" type="MarginContainer" parent="Text/Button" unique_id=414299130]
+[node name="MarginContainer" type="MarginContainer" parent="Details/Button" unique_id=414299130]
 layout_mode = 2
 
-[node name="PlayAgain" type="Button" parent="Text/Button/MarginContainer" unique_id=993945265]
+[node name="GridContainer" type="GridContainer" parent="Details/Button/MarginContainer" unique_id=1114333783]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Details/Button/MarginContainer/GridContainer" unique_id=2024480324]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_right = 20
+
+[node name="PlayBonus" type="Button" parent="Details/Button/MarginContainer/GridContainer/MarginContainer2" unique_id=1815435095]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 70)
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_ko56s")
+text = "Play Bonus"
+icon_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Details/Button/MarginContainer/GridContainer" unique_id=1153511910]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="PlayAgain" type="Button" parent="Details/Button/MarginContainer/GridContainer/MarginContainer" unique_id=993945265]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -167,4 +281,86 @@ texture = ExtResource("6_mpa62")
 expand_mode = 5
 stretch_mode = 4
 
-[connection signal="pressed" from="Text/Button/MarginContainer/PlayAgain" to="Text/Button/MarginContainer/PlayAgain" method="on_start_button_pressed"]
+[node name="BonusModal" type="Panel" parent="." unique_id=1142433943]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_66ppb")
+
+[node name="ModalContainer" type="MarginContainer" parent="BonusModal" unique_id=1345269683]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="KinderKid" type="TextureRect" parent="BonusModal" unique_id=25367642]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("8_66ppb")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Item" type="TextureRect" parent="BonusModal" unique_id=1070632059]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
+texture = ExtResource("9_ppv2p")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=622388816]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -610.0
+offset_top = -450.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 300
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1410676358]
+custom_minimum_size = Vector2(400, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_6fhhm")
+
+[node name="KinderKid" type="TextureRect" parent="MarginContainer/PanelContainer" unique_id=1285738197]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("8_66ppb")
+
+[connection signal="pressed" from="Details/Button/MarginContainer/GridContainer/MarginContainer2/PlayBonus" to="Details/Button/MarginContainer/GridContainer/MarginContainer2/PlayBonus" method="on_start_button_pressed"]
+[connection signal="pressed" from="Details/Button/MarginContainer/GridContainer/MarginContainer/PlayAgain" to="Details/Button/MarginContainer/GridContainer/MarginContainer/PlayAgain" method="on_start_button_pressed"]

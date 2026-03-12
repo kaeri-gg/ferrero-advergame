@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="1_k4yyp"]
 
 [resource]
-Label/colors/font_color = Color(0.53478247, 0.23320168, 0.21875253, 1)
+Label/colors/font_color = Color(0.53333336, 0.23137255, 0.21960784, 1)
 Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.078431375)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 3
