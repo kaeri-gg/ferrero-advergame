@@ -34,6 +34,7 @@ func _ready() -> void:
 	for child in product_container.get_children():
 		if child is TextureButton:
 			chocolate_options.append(child)
+			unhighlight(child)
 
 	for chocolate in chocolate_options:
 		chocolate.button_down.connect(on_button_pressed.bind(chocolate))
@@ -44,6 +45,7 @@ func _ready() -> void:
 	start_game_button.pressed.connect(on_start_button_pressed)
 		
 func on_button_pressed(chocolate: TextureButton) -> void:
+	notification_label.hide()
 	
 	if selected_chocolates.has(chocolate):
 		selected_chocolates.erase(chocolate)
@@ -75,12 +77,13 @@ func on_start_button_pressed() -> void:
 	else:
 		notification_label.show()
 		notification_label.text = "Please select at least 1 product."
+		
 
 func highlight(button: TextureButton) -> void:
-	button.modulate = Color(0.715, 0.746, 0.958, 1.0)
+	button.modulate = Color(1, 1, 1)
 
 func unhighlight(button: TextureButton) -> void:
-	button.modulate = Color(1, 1, 1) 
+	button.modulate = Color("dab9b8ff")
 
 func on_hover_start(button: TextureButton) -> void:
 	var tween := create_tween()

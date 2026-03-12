@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpf1dxu3gkb2d"
-path="res://.godot/imported/ferrero-bg-gameover-2.png-8bed48038aad3e5fbe8e801e8fb0e732.ctex"
+uid="uid://bdfw5unqmqk2u"
+path="res://.godot/imported/logo-04.png-04e39c255c7f84d970aa8305ff55740e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ferrero-bg-gameover-2.png"
-dest_files=["res://.godot/imported/ferrero-bg-gameover-2.png-8bed48038aad3e5fbe8e801e8fb0e732.ctex"]
+source_file="res://assets/logo/logo-04.png"
+dest_files=["res://.godot/imported/logo-04.png-04e39c255c7f84d970aa8305ff55740e.ctex"]
 
 [params]
 

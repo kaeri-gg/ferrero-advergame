@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://ygh08o38q3sj"]
 
-[ext_resource type="Texture2D" uid="uid://dpf1dxu3gkb2d" path="res://assets/ferrero-bg-gameover-2.png" id="1_213rg"]
+[ext_resource type="Texture2D" uid="uid://dv26qyvkmj44q" path="res://assets/background-4.png" id="1_213rg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yqw1"]
 texture = ExtResource("1_213rg")

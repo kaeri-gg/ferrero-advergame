@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceps31ui542xf"
-path="res://.godot/imported/ferrero-bg-2.png-df0cc75464b95e5b9e097a26c406bbfd.ctex"
+uid="uid://b2gagf3m4lxos"
+path="res://.godot/imported/background-bu.png-79f87a7ec082d405c75f7f1f16b29d10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ferrero-bg-2.png"
-dest_files=["res://.godot/imported/ferrero-bg-2.png-df0cc75464b95e5b9e097a26c406bbfd.ctex"]
+source_file="res://assets/background-bu.png"
+dest_files=["res://.godot/imported/background-bu.png-79f87a7ec082d405c75f7f1f16b29d10.ctex"]
 
 [params]
 

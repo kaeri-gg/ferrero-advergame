@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq1deavoxyvc1"
-path="res://.godot/imported/Ferrerorocher_brand_logo.png-60379c3afd19123d7578a4c223181ddb.ctex"
+uid="uid://b4l1lea2q02w0"
+path="res://.godot/imported/background-bu (2).png-f11ee407028062137db709ad90598f32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ferrerorocher_brand_logo.png"
-dest_files=["res://.godot/imported/Ferrerorocher_brand_logo.png-60379c3afd19123d7578a4c223181ddb.ctex"]
+source_file="res://assets/background-bu (2).png"
+dest_files=["res://.godot/imported/background-bu (2).png-f11ee407028062137db709ad90598f32.ctex"]
 
 [params]
 
