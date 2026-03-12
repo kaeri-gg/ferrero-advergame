@@ -1,14 +1,15 @@
 # Ferrero Hunt
 
 A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memorize where the chocolates appear on a 4x4 grid, then click the correct tiles before time runs out to earn discounts!
-- Developed by Kathleen Povadora.
-- Assets by Alicja and Pariya.
-- Inspired by: Brain Buddies
+- Designed & developed by Kathleen.
+- Kinder kid asset by Pariya.
+- Inspired by: Brain Buddies.
 
-## [Play Here](https://kaeri-gg.github.io/ferrero-advergame/release/)
+## [Play Here](https://kaeri-gg.github.io/chocolate-game/release/](https://kaeri-gg.github.io/ferrero-advergame/release))
 > *For educational purposes only.*
 
-![img.png](assets/img.png)
+<img width="1918" height="1072" alt="image" src="https://github.com/user-attachments/assets/471e52e8-6668-4a3e-b00d-4be8134434f2" />
+
 ---
 
 ## Gameplay            
@@ -36,7 +37,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 ## Project Structure
 
 ```
-ferrero-advergame/
+chocolate-game/
 |-- assets/             # Images, fonts, and sound effects
 |   |-- font/           # LuckiestGuy, PoetsenOne
 |   |-- sounds/         # BGM, click, correct/wrong, countdown, winning
@@ -80,7 +81,7 @@ ferrero-advergame/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/ferrero-advergame.git
+   git clone https://github.com/<your-username>/chocolate-game.git
    ```
 2. Open `project.godot` in Godot 4.6.
 3. Press **F5** (or *Play*) to run.
@@ -93,7 +94,7 @@ The project includes a Web export preset ("Ferrero Hunt"):
 2. Select the **Ferrero Hunt** preset.
 3. Click **Export Project** — output goes to `release/index.html`.
 
-> The HTML shell injects `<base href="/ferrero-advergame/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
+> The HTML shell injects `<base href="/chocolate-game/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
 
 ---
 
@@ -102,4 +103,5 @@ The project includes a Web export preset ("Ferrero Hunt"):
 - This project is for educational purposes.
 - Sound Effect by <a href="https://pixabay.com/users/aberrantrealities-38952538/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Jordan Garner</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Pixabay</a>
 - Sound Effect by DRAGON-STUDIO from Pixabay
+- Some part of images from Freepik
 
