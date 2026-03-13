@@ -345,11 +345,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -610.0
+offset_left = -700.0
 offset_top = -450.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/margin_right = 300
+mouse_filter = 2
+theme_override_constants/margin_right = 250
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1410676358]
 custom_minimum_size = Vector2(400, 450)

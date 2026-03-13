@@ -11,7 +11,7 @@
 [ext_resource type="Theme" uid="uid://d32y3tsp1g0hg" path="res://theme/score.tres" id="6_xavy2"]
 [ext_resource type="Texture2D" uid="uid://mpyy6tu83tlb" path="res://assets/feedback-wrong.png" id="10_xavy2"]
 [ext_resource type="Texture2D" uid="uid://cvqrp1cljdp" path="res://assets/logo/logo-01.png" id="12_f8mcn"]
-[ext_resource type="Script" path="res://script/product_selection.gd" id="13_l506t"]
+[ext_resource type="Script" uid="uid://cvcyf8ypmretc" path="res://script/product_selection.gd" id="13_l506t"]
 [ext_resource type="Texture2D" uid="uid://draisunotdpif" path="res://assets/background-6.png" id="13_rvira"]
 [ext_resource type="Texture2D" uid="uid://o2ymlyqoi65p" path="res://assets/stickers/ferrero-products_0007_Layer-0.png" id="14_l506t"]
 [ext_resource type="Texture2D" uid="uid://evlaxqmmummb" path="res://assets/stickers/ferrero-products_0006_Rondnoir2.png" id="15_nw6ib"]
@@ -139,7 +139,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -150,7 +149,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -161,7 +159,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -172,7 +169,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -183,7 +179,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -194,7 +189,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -205,7 +199,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -216,7 +209,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -227,7 +219,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -238,7 +229,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -249,7 +239,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -260,7 +249,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -271,7 +259,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -282,7 +269,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -293,7 +279,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -304,7 +289,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_ry1uq")
-theme_override_constants/icon_max_width = 125
 icon_alignment = 1
 expand_icon = true
 
@@ -465,7 +449,6 @@ stretch_mode = 4
 
 [node name="ProductSelection" type="Panel" parent="." unique_id=1817772342]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -487,41 +470,43 @@ grow_vertical = 2
 layout_mode = 2
 theme = SubResource("Theme_6s1rr")
 
-[node name="GridContainer2" type="GridContainer" parent="ProductSelection" unique_id=5142432]
+[node name="Container" type="GridContainer" parent="ProductSelection" unique_id=5142432]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -499.0
-offset_top = -445.5
 offset_right = 499.0
-offset_bottom = 445.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="ProductSelection/GridContainer2" unique_id=478958763]
+[node name="GridContainer" type="GridContainer" parent="ProductSelection/Container" unique_id=1665129858]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="DescriptionAndIcon" type="GridContainer" parent="ProductSelection/Container/GridContainer" unique_id=478958763]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="LabelContainer" type="MarginContainer" parent="ProductSelection/GridContainer2/GridContainer" unique_id=733361666]
+[node name="LabelContainer" type="MarginContainer" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon" unique_id=733361666]
 layout_mode = 2
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_top = 70
 theme_override_constants/margin_bottom = 40
 
-[node name="Instruction" type="Label" parent="ProductSelection/GridContainer2/GridContainer/LabelContainer" unique_id=184787878]
+[node name="Instruction" type="Label" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/LabelContainer" unique_id=184787878]
 layout_mode = 2
 theme = SubResource("Theme_l4hwf")
-text = "Select products up to 6 you 
+text = "Select products you 
 want for a discount:"
 horizontal_alignment = 1
 
-[node name="ProductsContainer" type="MarginContainer" parent="ProductSelection/GridContainer2/GridContainer" unique_id=2055874986]
+[node name="ProductsContainer" type="MarginContainer" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon" unique_id=2055874986]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ProductContainer" type="GridContainer" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer" unique_id=15946075]
+[node name="ProductContainer" type="GridContainer" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer" unique_id=15946075]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -529,7 +514,7 @@ size_flags_vertical = 4
 theme = SubResource("Theme_4cqoh")
 columns = 3
 
-[node name="Rocher" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=1513777446]
+[node name="Rocher" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1513777446]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -537,7 +522,7 @@ texture_normal = ExtResource("14_l506t")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Rondnoir" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=1385707147]
+[node name="Rondnoir" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1385707147]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -545,7 +530,7 @@ texture_normal = ExtResource("15_nw6ib")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Raffaelo" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=1446556570]
+[node name="Raffaelo" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1446556570]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -553,7 +538,7 @@ texture_normal = ExtResource("16_rvira")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Kinderini" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=1510810702]
+[node name="Kinderini" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1510810702]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -561,7 +546,7 @@ texture_normal = ExtResource("17_l506t")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Delice" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=1667176183]
+[node name="Delice" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1667176183]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -569,7 +554,7 @@ texture_normal = ExtResource("18_l506t")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Bueno" type="TextureButton" parent="ProductSelection/GridContainer2/GridContainer/ProductsContainer/ProductContainer" unique_id=992603108]
+[node name="Bueno" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=992603108]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(330, 220)
 layout_mode = 2
@@ -577,17 +562,17 @@ texture_normal = ExtResource("19_nw6ib")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Button" type="GridContainer" parent="ProductSelection/GridContainer2" unique_id=1410155233]
+[node name="Button" type="GridContainer" parent="ProductSelection/Container/GridContainer" unique_id=1410155233]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="ButtonContainer" type="MarginContainer" parent="ProductSelection/GridContainer2/Button" unique_id=24329493]
+[node name="ButtonContainer" type="MarginContainer" parent="ProductSelection/Container/GridContainer/Button" unique_id=24329493]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="StartGame" type="Button" parent="ProductSelection/GridContainer2/Button/ButtonContainer" unique_id=1812791779]
+[node name="StartGame" type="Button" parent="ProductSelection/Container/GridContainer/Button/ButtonContainer" unique_id=1812791779]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 70)
 layout_mode = 2
@@ -597,39 +582,39 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("20_f8mcn")
 text = "Start game"
 
-[node name="SelectedChocoCount" type="MarginContainer" parent="ProductSelection/GridContainer2/Button" unique_id=833228725]
+[node name="SelectedChocoCount" type="MarginContainer" parent="ProductSelection/Container/GridContainer/Button" unique_id=833228725]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="VBoxContainer" type="HBoxContainer" parent="ProductSelection/GridContainer2/Button/SelectedChocoCount" unique_id=1757451521]
+[node name="VBoxContainer" type="HBoxContainer" parent="ProductSelection/Container/GridContainer/Button/SelectedChocoCount" unique_id=1757451521]
 layout_mode = 2
 
-[node name="Instruction" type="Label" parent="ProductSelection/GridContainer2/Button/SelectedChocoCount/VBoxContainer" unique_id=1401998090]
+[node name="Instruction" type="Label" parent="ProductSelection/Container/GridContainer/Button/SelectedChocoCount/VBoxContainer" unique_id=1401998090]
 layout_mode = 2
 theme = SubResource("Theme_rvira")
 text = "Selected: "
 horizontal_alignment = 1
 
-[node name="SelectedItemCount" type="Label" parent="ProductSelection/GridContainer2/Button/SelectedChocoCount/VBoxContainer" unique_id=1969683816]
+[node name="SelectedItemCount" type="Label" parent="ProductSelection/Container/GridContainer/Button/SelectedChocoCount/VBoxContainer" unique_id=1969683816]
 unique_name_in_owner = true
 layout_mode = 2
 theme = SubResource("Theme_rvira")
 text = "0/6"
 horizontal_alignment = 1
 
-[node name="NotificationContainer" type="MarginContainer" parent="ProductSelection/GridContainer2/Button" unique_id=1191796204]
+[node name="NotificationContainer" type="MarginContainer" parent="ProductSelection/Container/GridContainer/Button" unique_id=1191796204]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_bottom = 40
 
-[node name="VBoxContainer" type="HBoxContainer" parent="ProductSelection/GridContainer2/Button/NotificationContainer" unique_id=2137788438]
+[node name="VBoxContainer" type="HBoxContainer" parent="ProductSelection/Container/GridContainer/Button/NotificationContainer" unique_id=2137788438]
 layout_mode = 2
 
-[node name="NotificationLabel" type="Label" parent="ProductSelection/GridContainer2/Button/NotificationContainer/VBoxContainer" unique_id=468548745]
+[node name="NotificationLabel" type="Label" parent="ProductSelection/Container/GridContainer/Button/NotificationContainer/VBoxContainer" unique_id=468548745]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("22_rvira")
 text = "Notification"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="ProductSelection/GridContainer2/Button/ButtonContainer/StartGame" to="ProductSelection/GridContainer2/Button/ButtonContainer/StartGame" method="on_start_button_pressed"]
+[connection signal="pressed" from="ProductSelection/Container/GridContainer/Button/ButtonContainer/StartGame" to="ProductSelection/Container/GridContainer/Button/ButtonContainer/StartGame" method="on_start_button_pressed"]
