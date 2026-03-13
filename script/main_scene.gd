@@ -25,17 +25,7 @@ var correct_tiles: Dictionary[int, bool] = {} # Tile index -> Clicked flag
 var tiles_icon: Dictionary = {}
 
 
-var icon_textures = [
-	#preload("uid://b6qvf7a0mcdus"),
-	#preload("uid://60vxsf5p18ch"),
-	#preload("uid://cqf8op828e4ec"),
-	#preload("uid://cbao1235bvclv"),
-	#preload("uid://cy2luwjnwvnp4"),
-	#preload("uid://cbhqqs3dnly3j"),
-	#preload("uid://evlaxqmmummb"),
-	#preload("uid://o2ymlyqoi65p"),
-	#preload("uid://b828o58sc06lq")
-]
+var icon_textures = []
 
 func reset_game() -> void:
 	countdown = 3

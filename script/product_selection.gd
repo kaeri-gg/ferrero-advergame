@@ -45,8 +45,9 @@ func _ready() -> void:
 	start_game_button.pressed.connect(on_start_button_pressed)
 		
 func on_button_pressed(chocolate: TextureButton) -> void:
+	sound_manager.play("Click")
 	notification_label.hide()
-	
+
 	if selected_chocolates.has(chocolate):
 		selected_chocolates.erase(chocolate)
 		update_choco_counter(-1)
@@ -70,6 +71,8 @@ func has_selection() -> bool:
 	return selected_chocolates.size() > 0
 
 func on_start_button_pressed() -> void:
+	sound_manager.play("EnterGame")
+	
 	if has_selection():
 		selection_confirmed.emit(selected_chocolates)
 		product_selection.hide()

@@ -42,15 +42,17 @@ func get_score_message(total_points: int) -> void:
 		kinder_kid_image.texture = KINDER_KID_HAPPY
 		
 	elif total_points >= 20:
-		message.text = "Good start! Keep practicing your chocolate hunt!"
+		message.text = "Not bad! Keep practicing your chocolate hunt!"
 		kinder_kid_image.texture = KINDER_KID_SAD
 		
 	else:
-		message.text = "I think you fell asleep. Try again!"
+		message.text = "I think you fell asleep. It happens!"
+		on_your_next_purchase.text = "You can try again!"
 		kinder_kid_image.texture = KINDER_KID_CYRING
 		
 		
 func on_play_again_pressed() -> void:
+	sound_manager.play("EnterGame")
 	get_tree().change_scene_to_file("res://scene/main_scene.tscn")
 	
 func on_play_bonus_pressed() -> void:
