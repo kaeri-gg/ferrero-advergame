@@ -16,6 +16,7 @@ A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memoriz
 
 1. **Start** - Press *Play* on the main menu.
 2. **Countdown** - A 3-second countdown plays before the round begins.
+3. **Selection** - Product selection for brand awareness.
 3. **Memorize** - Chocolate sticker icons briefly flash on random tiles in the 4x4 grid.
 4. **Recall** - Click the tiles where the chocolates appeared.
     - **Correct round** - All chocolates found = bonus points (`chocolate_count * streak`).
@@ -94,7 +95,7 @@ The project includes a Web export preset ("Ferrero Hunt"):
 2. Select the **Ferrero Hunt** preset.
 3. Click **Export Project** — output goes to `release/index.html`.
 
-> The HTML shell injects `<base href="/chocolate-game/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
+> The HTML shell injects `<base href="/ferrero-advergame/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
 
 ---
 

@@ -23,7 +23,7 @@ var current_chocolate_count: int
 
 func reset_selection() -> void:
 	selected_chocolates = []
-	max_chocolate_count = 3
+	max_chocolate_count = 6
 	current_chocolate_count = 0
 	notification_label.text = ""
 
@@ -64,7 +64,7 @@ func on_button_pressed(chocolate: TextureButton) -> void:
 
 func update_choco_counter(delta: int) -> void:
 	current_chocolate_count += delta
-	selected_item_count.text = str(current_chocolate_count, "/3")
+	selected_item_count.text = str(current_chocolate_count, "/", max_chocolate_count)
 
 func has_selection() -> bool:
 	return selected_chocolates.size() > 0

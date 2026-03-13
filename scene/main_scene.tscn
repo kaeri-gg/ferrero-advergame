@@ -449,7 +449,6 @@ stretch_mode = 4
 
 [node name="ProductSelection" type="Panel" parent="." unique_id=1817772342]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -473,16 +472,17 @@ theme = SubResource("Theme_6s1rr")
 
 [node name="GridContainer2" type="GridContainer" parent="ProductSelection" unique_id=5142432]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -574.0
-offset_top = -847.0
+offset_top = -458.5
 offset_right = 574.0
+offset_bottom = 458.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="ProductSelection/GridContainer2" unique_id=478958763]
 layout_mode = 2
