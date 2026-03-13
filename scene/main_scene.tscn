@@ -494,7 +494,7 @@ theme_override_constants/margin_bottom = 40
 [node name="Instruction" type="Label" parent="ProductSelection/GridContainer2/GridContainer/LabelContainer" unique_id=184787878]
 layout_mode = 2
 theme = SubResource("Theme_l4hwf")
-text = "Select products up to 3 you 
+text = "Select products up to 6 you 
 want for a discount:"
 horizontal_alignment = 1
 
