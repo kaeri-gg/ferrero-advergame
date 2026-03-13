@@ -1,9 +1,13 @@
 # Ferrero Hunt
 
-A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Memorize where the chocolates appear on a 4x4 grid, then click the correct tiles before time runs out to earn discounts!
+A chocolate-themed memory advergame built with **Godot 4.6** (GDScript). Version 2 of [this game](https://github.com/kaeri-gg/chocolate-game) Memorize where the chocolates appear on a 4x4 grid, then click the correct tiles before time runs out to earn discounts!
 - Designed & developed by Kathleen.
+- Game title by Alicja
 - Kinder kid asset by Pariya.
-- Inspired by: Brain Buddies.
+- Game concept inspired by: Brain Buddies.
+- Sound Effect by <a href="https://pixabay.com/users/aberrantrealities-38952538/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Jordan Garner</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Pixabay</a>
+- Sound Effect by DRAGON-STUDIO from Pixabay
+- Some part of images from Freepik
 
 ## [Play Here](https://kaeri-gg.github.io/ferrero-advergame/release)
 > *For educational purposes only.*
@@ -96,13 +100,4 @@ The project includes a Web export preset ("Ferrero Hunt"):
 3. Click **Export Project** — output goes to `release/index.html`.
 
 > The HTML shell injects `<base href="/ferrero-advergame/release/">` for hosting under a subpath. Adjust `html/head_include` in `export_presets.cfg` if your deployment path differs.
-
----
-
-## Credits
-
-- This project is for educational purposes.
-- Sound Effect by <a href="https://pixabay.com/users/aberrantrealities-38952538/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Jordan Garner</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=412050">Pixabay</a>
-- Sound Effect by DRAGON-STUDIO from Pixabay
-- Some part of images from Freepik
 
