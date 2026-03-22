@@ -58,7 +58,7 @@ Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.7490
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
 Label/constants/shadow_outline_size = 5
-Label/font_sizes/font_size = 45
+Label/font_sizes/font_size = 30
 Label/fonts/font = ExtResource("21_l4hwf")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p2wx"]
@@ -68,13 +68,12 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_0p2wx")
 
 [sub_resource type="Theme" id="Theme_rvira"]
-default_font_size = 60
 Label/colors/font_color = Color(0.44692826, 0.1237965, 0.21069539, 1)
 Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.39215687)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
 Label/constants/shadow_outline_size = 5
-Label/font_sizes/font_size = 30
+Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("21_l4hwf")
 
 [node name="MainScene" type="Control" unique_id=456637166]
@@ -96,17 +95,17 @@ grow_vertical = 2
 theme = ExtResource("2_x5n27")
 
 [node name="Grid" type="Panel" parent="." unique_id=1245429442]
-custom_minimum_size = Vector2(600, 600)
+custom_minimum_size = Vector2(450, 450)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -400.0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_left = -225.0
+offset_top = -225.0
+offset_right = 225.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_jsie2")
@@ -125,16 +124,16 @@ theme_override_constants/margin_bottom = 50
 
 [node name="GridContainer" type="GridContainer" parent="Grid/MarginContainer" unique_id=1620767907]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(700, 700)
 layout_mode = 2
-size_flags_vertical = 4
+size_flags_horizontal = 4
+size_flags_vertical = 0
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
 columns = 4
 
 [node name="Button" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1252871841]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -144,7 +143,7 @@ expand_icon = true
 
 [node name="Button2" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=2030997233]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -154,7 +153,7 @@ expand_icon = true
 
 [node name="Button3" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1154182183]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -164,7 +163,7 @@ expand_icon = true
 
 [node name="Button4" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=117593105]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -174,7 +173,7 @@ expand_icon = true
 
 [node name="Button5" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=420071638]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -184,7 +183,7 @@ expand_icon = true
 
 [node name="Button6" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=543369566]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -194,7 +193,7 @@ expand_icon = true
 
 [node name="Button7" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=711281490]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -204,7 +203,7 @@ expand_icon = true
 
 [node name="Button8" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1614785476]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -214,7 +213,7 @@ expand_icon = true
 
 [node name="Button9" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=2123380384]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -224,7 +223,7 @@ expand_icon = true
 
 [node name="Button10" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1117668270]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -234,7 +233,7 @@ expand_icon = true
 
 [node name="Button11" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1452310385]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -244,7 +243,7 @@ expand_icon = true
 
 [node name="Button12" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=761609547]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -254,7 +253,7 @@ expand_icon = true
 
 [node name="Button13" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1003784180]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -264,7 +263,7 @@ expand_icon = true
 
 [node name="Button14" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1175287760]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -274,7 +273,7 @@ expand_icon = true
 
 [node name="Button15" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1780795885]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -284,7 +283,7 @@ expand_icon = true
 
 [node name="Button16" type="Button" parent="Grid/MarginContainer/GridContainer" unique_id=1907446115]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -313,6 +312,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 
@@ -439,7 +439,7 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 
 [node name="Logo" type="TextureRect" parent="LogoContainer" unique_id=1671018212]
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -516,51 +516,51 @@ columns = 3
 
 [node name="Rocher" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1513777446]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 texture_normal = ExtResource("14_l506t")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Rondnoir" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1385707147]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 texture_normal = ExtResource("15_nw6ib")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Raffaelo" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1446556570]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(200, 140)
 layout_mode = 2
 texture_normal = ExtResource("16_rvira")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Kinderini" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1510810702]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(150, 110)
 layout_mode = 2
 texture_normal = ExtResource("17_l506t")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Delice" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=1667176183]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(150, 110)
 layout_mode = 2
 texture_normal = ExtResource("18_l506t")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Bueno" type="TextureButton" parent="ProductSelection/Container/GridContainer/DescriptionAndIcon/ProductsContainer/ProductContainer" unique_id=992603108]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(330, 220)
+custom_minimum_size = Vector2(150, 110)
 layout_mode = 2
 texture_normal = ExtResource("19_nw6ib")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 6
 
 [node name="Button" type="GridContainer" parent="ProductSelection/Container/GridContainer" unique_id=1410155233]
 layout_mode = 2
@@ -574,7 +574,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="StartGame" type="Button" parent="ProductSelection/Container/GridContainer/Button/ButtonContainer" unique_id=1812791779]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 70)
+custom_minimum_size = Vector2(180, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

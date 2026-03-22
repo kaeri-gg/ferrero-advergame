@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://ctq7ufpall8ay"]
+
+[ext_resource type="Theme" uid="uid://oaup8jlrnyqy" path="res://theme/modal_theme.tres" id="1_lyqql"]
+[ext_resource type="Theme" uid="uid://t0c22ef7e8oe" path="res://theme/info_theme.tres" id="2_s38gw"]
+[ext_resource type="Texture2D" uid="uid://fc7gtqqa1doy" path="res://assets/icon/button-icon_close.png" id="3_rrsj7"]
+[ext_resource type="Texture2D" uid="uid://4e4av6ty6p3h" path="res://assets/icon/button-icon_close-hover.png" id="4_m3sac"]
+
+[sub_resource type="Theme" id="Theme_buqbj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0521m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_bqtkl"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0521m")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqtkl"]
+bg_color = Color(0.31764707, 0.7058824, 0, 0)
+
+[sub_resource type="Theme" id="Theme_0p2wx"]
+Panel/styles/panel = SubResource("StyleBoxFlat_bqtkl")
+
+[node name="SettingsModal" type="Panel" unique_id=992524429]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lyqql")
+
+[node name="ModalContainer" type="MarginContainer" parent="." unique_id=37908207]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Grid" type="GridContainer" parent="ModalContainer" unique_id=1770512063]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_s38gw")
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="ModalContainer/Grid" unique_id=501927004]
+layout_mode = 2
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ModalContainer/Grid/MarginContainer" unique_id=330955367]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DisplaySettings" type="Label" parent="ModalContainer/Grid/MarginContainer/VBoxContainer" unique_id=636217221]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3882353, 0.20784314, 0.15294118, 1)
+theme_override_font_sizes/font_size = 30
+text = "Display Settings:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModalContainer/Grid" unique_id=1659508424]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="Resolution" type="Label" parent="ModalContainer/Grid/HBoxContainer" unique_id=559107200]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_buqbj")
+theme_override_font_sizes/font_size = 25
+text = "Resolution: "
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="ModalContainer/Grid/HBoxContainer" unique_id=1605144147]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ModalContainer/Grid" unique_id=1038581935]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 60
+
+[node name="UIScale" type="Label" parent="ModalContainer/Grid/HBoxContainer2" unique_id=1410541342]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_buqbj")
+theme_override_font_sizes/font_size = 25
+text = "UI Scale:"
+
+[node name="UIScaleOptionButton" type="OptionButton" parent="ModalContainer/Grid/HBoxContainer2" unique_id=1590959407]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ButtonContainer" type="MarginContainer" parent="." unique_id=306980573]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+offset_right = 110.0
+offset_bottom = 110.0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="ButtonContainer" unique_id=1533493320]
+layout_mode = 2
+theme = SubResource("Theme_bqtkl")
+
+[node name="CloseSettings2" type="TextureButton" parent="ButtonContainer/PanelContainer" unique_id=1329686150]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_rrsj7")
+texture_pressed = ExtResource("4_m3sac")
+texture_hover = ExtResource("4_m3sac")
+texture_focused = ExtResource("4_m3sac")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SettingsButton" type="Panel" parent="." unique_id=586265603]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme = SubResource("Theme_0p2wx")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsButton" unique_id=2116412564]
+layout_mode = 1
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsButton/MarginContainer" unique_id=913221187]
+layout_mode = 2
+theme = SubResource("Theme_bqtkl")
+
+[node name="CloseSettings" type="TextureButton" parent="SettingsButton/MarginContainer/PanelContainer" unique_id=1221958649]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("3_rrsj7")
+texture_pressed = ExtResource("4_m3sac")
+texture_hover = ExtResource("4_m3sac")
+texture_focused = ExtResource("4_m3sac")
+ignore_texture_size = true
+stretch_mode = 0

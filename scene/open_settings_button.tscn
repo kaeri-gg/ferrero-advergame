@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://23tq8318w40e"]
+
+[ext_resource type="Texture2D" uid="uid://dc61iwv5j38p6" path="res://assets/icon/button-icon_settings.png" id="1_05l5m"]
+[ext_resource type="Texture2D" uid="uid://bjluj36vx3i5w" path="res://assets/icon/button-icon_settings-hover.png" id="2_xh5mq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqtkl"]
+bg_color = Color(0.31764707, 0.7058824, 0, 0)
+
+[sub_resource type="Theme" id="Theme_0p2wx"]
+Panel/styles/panel = SubResource("StyleBoxFlat_bqtkl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0521m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_bqtkl"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0521m")
+
+[node name="OpenSettingsButton" type="Panel" unique_id=1052869995]
+custom_minimum_size = Vector2(90, 90)
+offset_right = 90.0
+offset_bottom = 90.0
+theme = SubResource("Theme_0p2wx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=813842159]
+layout_mode = 1
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=747493440]
+layout_mode = 2
+theme = SubResource("Theme_bqtkl")
+
+[node name="OpenSettings" type="TextureButton" parent="MarginContainer/PanelContainer" unique_id=780127529]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("1_05l5m")
+texture_pressed = ExtResource("2_xh5mq")
+texture_hover = ExtResource("2_xh5mq")
+texture_focused = ExtResource("2_xh5mq")
+ignore_texture_size = true
+stretch_mode = 0
