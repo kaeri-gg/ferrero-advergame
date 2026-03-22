@@ -4,9 +4,5 @@
 
 [resource]
 Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
-Label/colors/font_shadow_color = Color(0.8235294, 0.60784316, 0.41960785, 0.39215687)
-Label/constants/shadow_offset_x = 2
-Label/constants/shadow_offset_y = 2
-Label/constants/shadow_outline_size = 5
 Label/font_sizes/font_size = 60
 Label/fonts/font = ExtResource("1_x28iq")

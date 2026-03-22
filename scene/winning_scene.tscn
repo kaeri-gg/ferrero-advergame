@@ -2,36 +2,14 @@
 
 [ext_resource type="Script" uid="uid://d1sfkfixttef6" path="res://script/winning_scene.gd" id="1_1op46"]
 [ext_resource type="Theme" uid="uid://ygh08o38q3sj" path="res://theme/game_over_theme.tres" id="1_2ivjl"]
-[ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="3_265hk"]
+[ext_resource type="Theme" uid="uid://d32y3tsp1g0hg" path="res://theme/score.tres" id="3_vyfbx"]
+[ext_resource type="Theme" uid="uid://riabe1ybxphq" path="res://theme/score_labels.tres" id="4_4no08"]
 [ext_resource type="FontFile" uid="uid://cybuy7aojrjif" path="res://assets/font/PoetsenOne-Regular.ttf" id="4_mpa62"]
 [ext_resource type="Theme" uid="uid://dun37am2d0bpl" path="res://theme/button_theme.tres" id="5_mpa62"]
 [ext_resource type="Texture2D" uid="uid://cvqrp1cljdp" path="res://assets/logo/logo-01.png" id="6_mpa62"]
 [ext_resource type="Theme" uid="uid://oaup8jlrnyqy" path="res://theme/modal_theme.tres" id="7_66ppb"]
 [ext_resource type="Texture2D" uid="uid://b1fgqjtt2eh6m" path="res://assets/kinder-kid/kinder-kid-02.png" id="8_66ppb"]
 [ext_resource type="Texture2D" uid="uid://djtygfqkehdqm" path="res://assets/bonus-icon/ferrero-products_0000_raffaellooo.png" id="9_ppv2p"]
-
-[sub_resource type="Theme" id="Theme_pym3h"]
-Label/colors/font_color = Color(0.85490197, 0.14117648, 0.19215687, 1)
-Label/font_sizes/font_size = 35
-Label/fonts/font = ExtResource("3_265hk")
-
-[sub_resource type="Theme" id="Theme_1op46"]
-default_font_size = 50
-Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
-Label/font_sizes/font_size = 33
-Label/fonts/font = ExtResource("3_265hk")
-
-[sub_resource type="Theme" id="Theme_ppv2p"]
-default_font_size = 50
-Label/colors/font_color = Color(0.37401655, 0.27141848, 0.11278912, 1)
-Label/font_sizes/font_size = 33
-Label/fonts/font = ExtResource("3_265hk")
-
-[sub_resource type="Theme" id="Theme_luy87"]
-default_font_size = 50
-Label/colors/font_color = Color(0.45891654, 0.21165806, 0.08118083, 1)
-Label/font_sizes/font_size = 25
-Label/fonts/font = ExtResource("3_265hk")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_485dk"]
 bg_color = Color(0.8591287, 0.14282507, 0.19365862, 1)
@@ -148,7 +126,7 @@ layout_mode = 2
 
 [node name="TimerIsUp" type="Label" parent="Details/HeaderContainer" unique_id=2121345086]
 layout_mode = 2
-theme = SubResource("Theme_pym3h")
+theme = ExtResource("3_vyfbx")
 text = "Time's up!"
 horizontal_alignment = 1
 
@@ -157,18 +135,18 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Details/LabelsContainer" unique_id=1754123576]
 layout_mode = 2
+alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Details/LabelsContainer/VBoxContainer" unique_id=932332323]
 layout_mode = 2
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_bottom = 30
 
 [node name="Message" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer" unique_id=785568132]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-theme = SubResource("Theme_1op46")
+theme = ExtResource("4_4no08")
 theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
-theme_override_font_sizes/font_size = 50
 text = "Good start! Keep practicing your chocolate hunt."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -184,33 +162,25 @@ size_flags_horizontal = 4
 
 [node name="ScoreLabel" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=2084937731]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(700, 50)
 layout_mode = 2
-theme = SubResource("Theme_ppv2p")
-theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("3_vyfbx")
 text = "Score: 123"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="DiscountLabel" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1017315573]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(700, 60)
 layout_mode = 2
-theme = SubResource("Theme_1op46")
-theme_override_colors/font_color = Color(0.3781114, 0.16961002, 0.059547707, 1)
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("4_4no08")
 text = "20% discount"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="OnYourNextPurchase" type="Label" parent="Details/LabelsContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=273666367]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 50)
 layout_mode = 2
-theme = SubResource("Theme_luy87")
+theme = ExtResource("4_4no08")
 text = "on your next purchase! "
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -273,7 +243,7 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 
 [node name="Logo" type="TextureRect" parent="LogoContainer" unique_id=971526389]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -339,29 +309,30 @@ expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=622388816]
+custom_minimum_size = Vector2(350, 350)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -700.0
-offset_top = -450.0
+offset_left = -250.0
+offset_top = -250.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
-theme_override_constants/margin_right = 250
+theme_override_constants/margin_right = 50
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1410676358]
-custom_minimum_size = Vector2(400, 450)
 layout_mode = 2
-size_flags_horizontal = 4
 theme = SubResource("Theme_6fhhm")
 
 [node name="KinderKid" type="TextureRect" parent="MarginContainer/PanelContainer" unique_id=1285738197]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("8_66ppb")
+expand_mode = 5
+stretch_mode = 5
 
 [connection signal="pressed" from="Details/Button/MarginContainer/GridContainer/MarginContainer2/PlayBonus" to="Details/Button/MarginContainer/GridContainer/MarginContainer2/PlayBonus" method="on_start_button_pressed"]
 [connection signal="pressed" from="Details/Button/MarginContainer/GridContainer/MarginContainer/PlayAgain" to="Details/Button/MarginContainer/GridContainer/MarginContainer/PlayAgain" method="on_start_button_pressed"]

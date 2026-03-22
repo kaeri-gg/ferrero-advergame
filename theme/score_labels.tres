@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://riabe1ybxphq"]
+
+[ext_resource type="FontFile" uid="uid://p4b864enlloj" path="res://assets/font/LuckiestGuy-Regular.ttf" id="1_m2nmf"]
+
+[resource]
+default_font_size = 50
+Label/colors/font_color = Color(0.3764706, 0.16862746, 0.05882353, 1)
+Label/font_sizes/font_size = 35
+Label/fonts/font = ExtResource("1_m2nmf")

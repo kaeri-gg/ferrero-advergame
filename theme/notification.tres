@@ -8,5 +8,5 @@ Label/colors/font_shadow_color = Color(0.16862746, 0.11764706, 0.08235294, 0.019
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 3
 Label/constants/shadow_outline_size = 3
-Label/font_sizes/font_size = 20
+Label/font_sizes/font_size = 18
 Label/fonts/font = ExtResource("1_er08k")
